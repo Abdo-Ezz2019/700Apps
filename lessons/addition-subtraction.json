@@ -1,0 +1,449 @@
+{
+  "id": "addition-subtraction",
+  "title": "الجمع والطرح",
+  "scene": {
+    "svg": "<svg viewBox='0 0 600 320' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='286' width='600' height='34' fill='#e8f1df'/><g data-part-id='number'><rect x='215' y='12' width='170' height='96' rx='16' fill='#ffffff' stroke='#1d4e89' stroke-width='4'/><text id='num' x='300' y='64' text-anchor='middle' font-family='Cairo' font-size='48' font-weight='700' fill='#1d4e89' pointer-events='none'>0</text><text id='eq' x='300' y='94' text-anchor='middle' font-family='Cairo' font-size='22' font-weight='700' fill='#14213d' pointer-events='none'>؟</text></g><g data-part-id='basket'><path d='M330 214 L350 284 H510 L530 214 Z' fill='#d9a05b' stroke='#9a6b2f' stroke-width='4' stroke-linejoin='round'/><path d='M340 240 H520 M346 262 H514 M392 216 L398 284 M436 216 V284 M480 216 L474 284' stroke='#9a6b2f' stroke-width='2.5' fill='none'/><rect x='322' y='204' width='216' height='16' rx='8' fill='#b97f3a' stroke='#9a6b2f' stroke-width='3'/><text x='430' y='308' text-anchor='middle' font-family='Cairo' font-size='17' fill='#14213d' pointer-events='none'>السلة</text></g><g data-part-id='apples'><g id='a1' opacity='0'><circle cx='364' cy='196' r='24' fill='none'/><circle cx='364' cy='198' r='17' fill='#e63946' stroke='#a4161a' stroke-width='2'/><path d='M364 182 q3 -6 7 -8' stroke='#5a3e1b' stroke-width='3' fill='none' stroke-linecap='round'/><ellipse cx='373' cy='179' rx='7' ry='3.5' fill='#52b788' transform='rotate(-25 373 179)'/><circle cx='358' cy='193' r='4' fill='#ff8a95' opacity='.7'/></g><g id='a2' opacity='0'><circle cx='400' cy='196' r='24' fill='none'/><circle cx='400' cy='198' r='17' fill='#e63946' stroke='#a4161a' stroke-width='2'/><path d='M400 182 q3 -6 7 -8' stroke='#5a3e1b' stroke-width='3' fill='none' stroke-linecap='round'/><ellipse cx='409' cy='179' rx='7' ry='3.5' fill='#52b788' transform='rotate(-25 409 179)'/><circle cx='394' cy='193' r='4' fill='#ff8a95' opacity='.7'/></g><g id='a3' opacity='0'><circle cx='436' cy='196' r='24' fill='none'/><circle cx='436' cy='198' r='17' fill='#e63946' stroke='#a4161a' stroke-width='2'/><path d='M436 182 q3 -6 7 -8' stroke='#5a3e1b' stroke-width='3' fill='none' stroke-linecap='round'/><ellipse cx='445' cy='179' rx='7' ry='3.5' fill='#52b788' transform='rotate(-25 445 179)'/><circle cx='430' cy='193' r='4' fill='#ff8a95' opacity='.7'/></g><g id='a4' opacity='0'><circle cx='472' cy='196' r='24' fill='none'/><circle cx='472' cy='198' r='17' fill='#e63946' stroke='#a4161a' stroke-width='2'/><path d='M472 182 q3 -6 7 -8' stroke='#5a3e1b' stroke-width='3' fill='none' stroke-linecap='round'/><ellipse cx='481' cy='179' rx='7' ry='3.5' fill='#52b788' transform='rotate(-25 481 179)'/><circle cx='466' cy='193' r='4' fill='#ff8a95' opacity='.7'/></g><g id='a5' opacity='0'><circle cx='508' cy='196' r='24' fill='none'/><circle cx='508' cy='198' r='17' fill='#e63946' stroke='#a4161a' stroke-width='2'/><path d='M508 182 q3 -6 7 -8' stroke='#5a3e1b' stroke-width='3' fill='none' stroke-linecap='round'/><ellipse cx='517' cy='179' rx='7' ry='3.5' fill='#52b788' transform='rotate(-25 517 179)'/><circle cx='502' cy='193' r='4' fill='#ff8a95' opacity='.7'/></g><g id='a6' opacity='0'><circle cx='232' cy='262' r='24' fill='none'/><circle cx='232' cy='264' r='17' fill='#e63946' stroke='#a4161a' stroke-width='2'/><path d='M232 248 q3 -6 7 -8' stroke='#5a3e1b' stroke-width='3' fill='none' stroke-linecap='round'/><ellipse cx='241' cy='245' rx='7' ry='3.5' fill='#52b788' transform='rotate(-25 241 245)'/><circle cx='226' cy='259' r='4' fill='#ff8a95' opacity='.7'/></g><g id='a7' opacity='0'><circle cx='268' cy='262' r='24' fill='none'/><circle cx='268' cy='264' r='17' fill='#e63946' stroke='#a4161a' stroke-width='2'/><path d='M268 248 q3 -6 7 -8' stroke='#5a3e1b' stroke-width='3' fill='none' stroke-linecap='round'/><ellipse cx='277' cy='245' rx='7' ry='3.5' fill='#52b788' transform='rotate(-25 277 245)'/><circle cx='262' cy='259' r='4' fill='#ff8a95' opacity='.7'/></g><g id='a8' opacity='0'><circle cx='304' cy='262' r='24' fill='none'/><circle cx='304' cy='264' r='17' fill='#e63946' stroke='#a4161a' stroke-width='2'/><path d='M304 248 q3 -6 7 -8' stroke='#5a3e1b' stroke-width='3' fill='none' stroke-linecap='round'/><ellipse cx='313' cy='245' rx='7' ry='3.5' fill='#52b788' transform='rotate(-25 313 245)'/><circle cx='298' cy='259' r='4' fill='#ff8a95' opacity='.7'/></g></g><circle id='s6' cx='382' cy='160' r='2' fill='none'/><circle id='s7' cx='418' cy='160' r='2' fill='none'/><circle id='s8' cx='454' cy='160' r='2' fill='none'/><circle id='out1' cx='262' cy='170' r='2' fill='none'/><circle id='out2' cx='226' cy='186' r='2' fill='none'/><g data-part-id='hand'><rect id='f1' x='46' y='186' width='30' height='62' rx='14' fill='#ffd8b5' stroke='#c98a5a' stroke-width='3' opacity='0'/><rect id='f2' x='80' y='104' width='26' height='90' rx='13' fill='#ffd8b5' stroke='#c98a5a' stroke-width='3' opacity='0'/><rect id='f3' x='110' y='88' width='26' height='106' rx='13' fill='#ffd8b5' stroke='#c98a5a' stroke-width='3' opacity='0'/><rect id='f4' x='140' y='100' width='26' height='94' rx='13' fill='#ffd8b5' stroke='#c98a5a' stroke-width='3' opacity='0'/><rect id='f5' x='170' y='126' width='26' height='70' rx='13' fill='#ffd8b5' stroke='#c98a5a' stroke-width='3' opacity='0'/><rect x='62' y='176' width='148' height='100' rx='34' fill='#ffd8b5' stroke='#c98a5a' stroke-width='3'/><text x='136' y='308' text-anchor='middle' font-family='Cairo' font-size='17' fill='#14213d' pointer-events='none'>أصابعك</text></g></svg>"
+  },
+  "parts": [
+    {
+      "id": "basket",
+      "label": "السلة",
+      "narration": "هذه السلة. عندما نضيف إليها تفاحات يزداد العدد، وعندما نخرج منها تفاحات يقل العدد.",
+      "simple_narration": "السلة فيها التفاح.",
+      "highlight": {
+        "zoom": 1.5
+      }
+    },
+    {
+      "id": "apples",
+      "label": "التفاح",
+      "narration": "هذه هي التفاحات. نستطيع عدها واحدة واحدة: واحد، اثنان، ثلاثة. حين نجمع تفاحات إلى تفاحات يكبر العدد، وحين نأخذ منها يصغر العدد.",
+      "simple_narration": "نعد التفاح واحدة واحدة.",
+      "highlight": {
+        "zoom": 1.3
+      }
+    },
+    {
+      "id": "hand",
+      "label": "أصابعك",
+      "narration": "هذه يدك. كل إصبع يمثل واحدا. افرد أصابعك واحدا بعد الآخر وعد معي، وبهذا تستطيع أن تجمع وتطرح دون أي أداة أخرى.",
+      "simple_narration": "أصابعك تساعدك على العد.",
+      "highlight": {
+        "zoom": 1.6
+      }
+    },
+    {
+      "id": "number",
+      "label": "العداد والمعادلة",
+      "narration": "هذا هو العداد، يخبرك بالعدد الذي وصلنا إليه. وتحته المعادلة: خمسة زائد ثلاثة يساوي ثمانية. عندما نجمع يكبر العدد، وعندما نطرح يصغر العدد.",
+      "simple_narration": "العداد يخبرك بالعدد.",
+      "highlight": {
+        "zoom": 1.6
+      }
+    }
+  ],
+  "lab": {
+    "controls": [
+      {
+        "id": "have",
+        "label": "تفاح في السلة",
+        "min": 5,
+        "max": 10,
+        "step": 1,
+        "default": 5
+      },
+      {
+        "id": "added",
+        "label": "تفاح أضفناه",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "id": "eaten",
+        "label": "تفاح أكلناه",
+        "min": 0,
+        "max": 5,
+        "step": 1,
+        "default": 2
+      }
+    ],
+    "model": {
+      "outputs": [
+        {
+          "id": "total",
+          "label": "بعد الجمع",
+          "unit": "تفاحة",
+          "formula": "have + added"
+        },
+        {
+          "id": "left",
+          "label": "بعد الطرح",
+          "unit": "تفاحة",
+          "formula": "have + added - eaten"
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "when": {
+          "control": "added",
+          "change": "increase"
+        },
+        "say": "أضفنا تفاحات جديدة إلى السلة، فانظر كيف كبر العدد!"
+      },
+      {
+        "when": {
+          "control": "added",
+          "change": "decrease"
+        },
+        "say": "أضفنا تفاحات أقل، فصار العدد أصغر."
+      },
+      {
+        "when": {
+          "control": "eaten",
+          "change": "increase"
+        },
+        "say": "أكل يوسف تفاحات أكثر، فتأمل كم بقي في السلة!"
+      },
+      {
+        "when": {
+          "control": "eaten",
+          "change": "decrease"
+        },
+        "say": "أكل يوسف تفاحات أقل، فبقي في السلة عدد أكبر."
+      }
+    ]
+  },
+  "checks": [
+    {
+      "question": "إذا كان عندك أربع تفاحات وأضفت إليها تفاحتين، فإن العدد يصبح...",
+      "options": [
+        "أكبر",
+        "أصغر",
+        "كما هو"
+      ],
+      "answer": 0,
+      "explanation": "عندما نضيف فإننا نجمع، فيكبر العدد: أربعة زائد اثنين يساوي ستة."
+    },
+    {
+      "question": "إذا كان معك عشرة جنيهات وأنفقت خمسة، فكم يبقى معك؟",
+      "options": [
+        "خمسة",
+        "خمسة عشر",
+        "عشرة"
+      ],
+      "answer": 0,
+      "explanation": "الإنفاق يعني أننا نطرح: عشرة ناقص خمسة يساوي خمسة."
+    }
+  ],
+  "story": [
+    {
+      "story_function": "setup",
+      "part": "basket",
+      "text": "قبل وصول الضيوف بعشر دقائق، همست أم يوسف: نحتاج إلى ثماني تفاحات للسلطة، فهل تكفينا التي في السلة؟ ركض يوسف إلى السلة وبدأ يعد بسرعة: واحد، اثنان، ثلاثة، أربعة، خمسة.",
+      "anim": [
+        {
+          "at": 0.467,
+          "do": "pulse",
+          "ids": [
+            "a1",
+            "a2",
+            "a3",
+            "a4",
+            "a5"
+          ]
+        },
+        {
+          "at": 0.867,
+          "do": "count",
+          "ids": [
+            "a1",
+            "a2",
+            "a3",
+            "a4",
+            "a5"
+          ],
+          "label": "num"
+        }
+      ]
+    },
+    {
+      "story_function": "discovery",
+      "part": "apples",
+      "text": "خمس تفاحات فقط! شعر يوسف بالقلق، لكن مريم دخلت المطبخ وفي يديها ثلاث تفاحات من شجرة الجدة، وقالت: ربما تنقذنا هذه. وضعها يوسف في السلة واحدة بعد الأخرى.",
+      "anim": [
+        {
+          "at": 0.464,
+          "do": "show",
+          "ids": [
+            "a6",
+            "a7",
+            "a8"
+          ],
+          "stagger": 0.5
+        },
+        {
+          "at": 0.786,
+          "do": "move",
+          "id": "a6",
+          "to": "s6"
+        },
+        {
+          "at": 0.826,
+          "do": "move",
+          "id": "a7",
+          "to": "s7"
+        },
+        {
+          "at": 0.866,
+          "do": "move",
+          "id": "a8",
+          "to": "s8"
+        }
+      ]
+    },
+    {
+      "story_function": "investigation",
+      "part": "number",
+      "text": "عاد يوسف يعد من جديد وقلبه يخفق: ستة، سبعة، ثمانية! ثمانية تفاحات تماما! ابتسم وقال: كان ينقصنا ثلاث تفاحات، وها هي قد جاءت.",
+      "anim": [
+        {
+          "at": 0.348,
+          "do": "count",
+          "ids": [
+            "a6",
+            "a7",
+            "a8"
+          ],
+          "from": 6,
+          "label": "num"
+        },
+        {
+          "at": 0.609,
+          "do": "set_text",
+          "id": "eq",
+          "text": "5 + 3 = 8"
+        },
+        {
+          "at": 0.97,
+          "do": "bounce",
+          "ids": [
+            "a1",
+            "a2",
+            "a3",
+            "a4",
+            "a5",
+            "a6",
+            "a7",
+            "a8"
+          ],
+          "stagger": 0.08
+        }
+      ]
+    },
+    {
+      "story_function": "learner_decision",
+      "part": "hand",
+      "text": "وسألت مريم مازحة: وماذا لو لم يكن أمامنا تفاح نعده؟ رفع يوسف يده وقال: أصابعي تكفي! ثم فرد أصابعه واحدا بعد الآخر: واحد، اثنان، ثلاثة، أربعة، خمسة.",
+      "anim": [
+        {
+          "at": 0.407,
+          "do": "pulse",
+          "ids": [
+            "f3"
+          ]
+        },
+        {
+          "at": 0.852,
+          "do": "count",
+          "ids": [
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5"
+          ],
+          "label": "num"
+        },
+        {
+          "at": 0.98,
+          "do": "wiggle",
+          "ids": [
+            "f1",
+            "f2",
+            "f3",
+            "f4",
+            "f5"
+          ],
+          "stagger": 0.06
+        }
+      ]
+    },
+    {
+      "story_function": "discovery",
+      "part": "apples",
+      "text": "وبينما انشغلت الأم بتجهيز الأطباق، مد يوسف يده وأكل تفاحتين دون أن ينتبه أحد! ثم نظر إلى السلة وتساءل: كم بقي الآن؟ عد التفاحات الباقية: واحد، اثنان، ثلاثة، أربعة، خمسة، ستة.",
+      "anim": [
+        {
+          "at": 0.0,
+          "do": "set_text",
+          "id": "num",
+          "text": "8"
+        },
+        {
+          "at": 0.0,
+          "do": "set_text",
+          "id": "eq",
+          "text": "8 − 2 = ؟"
+        },
+        {
+          "at": 0.29,
+          "do": "move",
+          "id": "a8",
+          "to": "out1"
+        },
+        {
+          "at": 0.32,
+          "do": "move",
+          "id": "a7",
+          "to": "out2"
+        },
+        {
+          "at": 0.452,
+          "do": "hide",
+          "ids": [
+            "a8",
+            "a7"
+          ],
+          "stagger": 0.2
+        },
+        {
+          "at": 0.839,
+          "do": "count",
+          "ids": [
+            "a1",
+            "a2",
+            "a3",
+            "a4",
+            "a5",
+            "a6"
+          ],
+          "label": "num"
+        },
+        {
+          "at": 0.999,
+          "do": "set_text",
+          "id": "eq",
+          "text": "8 − 2 = 6"
+        }
+      ]
+    },
+    {
+      "story_function": "payoff",
+      "part": "number",
+      "text": "نقص العدد من ثمانية إلى ستة، ولو رأى الضيوف السلة هكذا لحزنت أمه! ركض يوسف إلى الجارة وعاد بتفاحتين، وقال: ثمانية من جديد! وابتسم لأنه عرف كم عنده وكم ينقصه، فأصلح الأمر قبل أن يطرق الباب أحد.",
+      "anim": [
+        {
+          "at": 0.514,
+          "do": "show",
+          "ids": [
+            "a7",
+            "a8"
+          ],
+          "stagger": 0.3
+        },
+        {
+          "at": 0.568,
+          "do": "move",
+          "id": "a7",
+          "to": "s7"
+        },
+        {
+          "at": 0.598,
+          "do": "move",
+          "id": "a8",
+          "to": "s8"
+        },
+        {
+          "at": 0.97,
+          "do": "set_text",
+          "id": "eq",
+          "text": "6 + 2 = 8"
+        },
+        {
+          "at": 0.97,
+          "do": "set_text",
+          "id": "num",
+          "text": "8"
+        },
+        {
+          "at": 0.99,
+          "do": "bounce",
+          "ids": [
+            "a1",
+            "a2",
+            "a3",
+            "a4",
+            "a5",
+            "a6",
+            "a7",
+            "a8"
+          ],
+          "stagger": 0.08
+        }
+      ]
+    }
+  ],
+  "quiz": {
+    "question": "كان مع مريم سبع قطع من الحلوى، فأكلت ثلاث قطع. كم قطعة بقيت معها؟",
+    "options": [
+      "أربع قطع",
+      "عشر قطع",
+      "ثلاث قطع"
+    ],
+    "answer": 0,
+    "explanation": "عندما نأخذ من العدد فإننا نطرح: سبعة ناقص ثلاثة يساوي أربعة.",
+    "retell": 4
+  },
+  "persona": {
+    "role": "in_story_character",
+    "name": "يوسف",
+    "identity": "a boy who helps his mother prepare a fruit salad before the guests arrive",
+    "voice": "curious and warm; counts out loud and thinks aloud",
+    "dialect": "msa",
+    "language": "ar",
+    "emotional_beat": "curiosity",
+    "scene_action": "follows the event",
+    "behavior": [
+      "observe",
+      "wonder",
+      "react",
+      "invite_discovery"
+    ],
+    "teaching_role": false,
+    "story_state": {
+      "current_goal": "have eight apples ready for the fruit salad",
+      "known_node_ids": [],
+      "discovered_node_ids": [],
+      "beliefs": [],
+      "emotional_state": "curiosity",
+      "relationship_with_student": "partner in discovery"
+    }
+  },
+  "story_arc": {
+    "strategy": "PROBLEM",
+    "world": "a family kitchen ten minutes before the guests arrive",
+    "premise": "Yusuf's mother needs eight apples for a fruit salad and the basket seems to hold too few",
+    "hook": "ten minutes before the guests arrive, his mother asks whether the apples in the basket are enough",
+    "life_use": "keeping track of how many things we have, how many we need and how many are missing: apples in a basket, coins, sweets, school supplies",
+    "goal": "have eight apples ready for the fruit salad before the guests arrive",
+    "conflict": "the basket holds only five apples, and later two of them get eaten",
+    "resolution": "Yusuf counts what he has, brings the missing apples, and when two are eaten he notices and replaces them so the basket holds eight again before the guests knock"
+  },
+  "dialect": "msa",
+  "language": "ar",
+  "direction": "rtl",
+  "tts_language": "ar"
+}

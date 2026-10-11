@@ -1,0 +1,153 @@
+{
+  "_note": "Real outputs of persona_engine.build_persona. The persona's metadata is English; its dialect/language fields drive the narration style.",
+  "default_narrator_first_scene_egyptian": {
+    "role": "in_world_narrative_voice",
+    "identity": "an in-world narrator who observes the event from inside the story world",
+    "voice": "curious and warm; tells what it sees and never lectures; speaks in Egyptian Arabic (colloquial)",
+    "dialect": "egyptian",
+    "language": "ar-EG",
+    "emotional_beat": "curiosity",
+    "scene_action": "What is hiding in the soil?",
+    "behavior": [
+      "observe",
+      "wonder",
+      "react",
+      "invite_discovery"
+    ],
+    "teaching_role": false,
+    "story_state": {
+      "current_goal": "Reveal the stages of plant growth",
+      "known_node_ids": [],
+      "discovered_node_ids": [],
+      "beliefs": [],
+      "emotional_state": "curiosity",
+      "relationship_with_student": "partner in discovery"
+    }
+  },
+  "default_narrator_first_scene_saudi": {
+    "role": "in_world_narrative_voice",
+    "identity": "an in-world narrator who observes the event from inside the story world",
+    "voice": "curious and warm; tells what it sees and never lectures; speaks in Saudi Arabic (white dialect)",
+    "dialect": "saudi",
+    "language": "ar-SA",
+    "emotional_beat": "curiosity",
+    "scene_action": "What is hiding in the soil?",
+    "behavior": [
+      "observe",
+      "wonder",
+      "react",
+      "invite_discovery"
+    ],
+    "teaching_role": false,
+    "story_state": {
+      "current_goal": "Reveal the stages of plant growth",
+      "known_node_ids": [],
+      "discovered_node_ids": [],
+      "beliefs": [],
+      "emotional_state": "curiosity",
+      "relationship_with_student": "partner in discovery"
+    }
+  },
+  "default_narrator_first_scene_msa": {
+    "role": "in_world_narrative_voice",
+    "identity": "an in-world narrator who observes the event from inside the story world",
+    "voice": "curious and warm; tells what it sees and never lectures; speaks in Modern Standard Arabic (simple, spoken-style)",
+    "dialect": "msa",
+    "language": "ar",
+    "emotional_beat": "curiosity",
+    "scene_action": "What is hiding in the soil?",
+    "behavior": [
+      "observe",
+      "wonder",
+      "react",
+      "invite_discovery"
+    ],
+    "teaching_role": false,
+    "story_state": {
+      "current_goal": "Reveal the stages of plant growth",
+      "known_node_ids": [],
+      "discovered_node_ids": [],
+      "beliefs": [],
+      "emotional_state": "curiosity",
+      "relationship_with_student": "partner in discovery"
+    }
+  },
+  "default_narrator_first_scene_english": {
+    "role": "in_world_narrative_voice",
+    "identity": "an in-world narrator who observes the event from inside the story world",
+    "voice": "curious and warm; tells what it sees and never lectures; speaks in English",
+    "dialect": "english",
+    "language": "en",
+    "emotional_beat": "curiosity",
+    "scene_action": "What is hiding in the soil?",
+    "behavior": [
+      "observe",
+      "wonder",
+      "react",
+      "invite_discovery"
+    ],
+    "teaching_role": false,
+    "story_state": {
+      "current_goal": "Reveal the stages of plant growth",
+      "known_node_ids": [],
+      "discovered_node_ids": [],
+      "beliefs": [],
+      "emotional_state": "curiosity",
+      "relationship_with_student": "partner in discovery"
+    }
+  },
+  "named_character_scene_1_saudi": {
+    "role": "in_story_character",
+    "name": "Salma",
+    "identity": "a student investigating why her toy cart stopped at different distances",
+    "voice": "curious and careful; thinks out loud",
+    "dialect": "saudi",
+    "language": "ar-SA",
+    "emotional_beat": "curiosity",
+    "scene_action": "Two marks in the hallway",
+    "behavior": [
+      "observe",
+      "wonder",
+      "react",
+      "invite_discovery"
+    ],
+    "teaching_role": false,
+    "story_state": {
+      "current_goal": "Find out why the distances differ",
+      "known_node_ids": [],
+      "discovered_node_ids": [],
+      "beliefs": [],
+      "emotional_state": "curiosity",
+      "relationship_with_student": "partner in discovery"
+    }
+  },
+  "named_character_scene_2_inherits_dialect_and_grows_state": {
+    "role": "in_story_character",
+    "name": "Salma",
+    "identity": "a student investigating why her toy cart stopped at different distances",
+    "voice": "curious and careful; thinks out loud",
+    "dialect": "saudi",
+    "language": "ar-SA",
+    "emotional_beat": "surprise",
+    "scene_action": "The cart starts",
+    "behavior": [
+      "observe",
+      "wonder",
+      "react",
+      "invite_discovery"
+    ],
+    "teaching_role": false,
+    "story_state": {
+      "current_goal": "Find out why the distances differ",
+      "known_node_ids": [
+        "physics.g4.friction"
+      ],
+      "discovered_node_ids": [
+        "physics.g4.friction"
+      ],
+      "beliefs": [],
+      "emotional_state": "surprise",
+      "relationship_with_student": "partner in discovery"
+    }
+  }
+}

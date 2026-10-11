@@ -1,0 +1,182 @@
+{
+  "_readme": "Single source of truth for narration language/dialect options. Edit this file to tune a dialect; no code change needed. Project overrides vs the original pack: audience 9-11 (grades 4-5); no diacritics/tanween anywhere; numbers as words in spoken text; per-dialect tts_language and forbidden_words (used by the validator).",
+  "default": "msa",
+  "aliases": {
+    "egyptian": "egyptian",
+    "egypt": "egyptian",
+    "eg": "egyptian",
+    "masri": "egyptian",
+    "ar-eg": "egyptian",
+    "saudi": "saudi",
+    "ksa": "saudi",
+    "sa": "saudi",
+    "khaleeji": "saudi",
+    "ar-sa": "saudi",
+    "msa": "msa",
+    "fusha": "msa",
+    "standard": "msa",
+    "modern_standard_arabic": "msa",
+    "ar": "msa",
+    "english": "english",
+    "en": "english",
+    "en-us": "english",
+    "en-gb": "english"
+  },
+  "dialects": {
+    "egyptian": {
+      "id": "egyptian",
+      "label": "Egyptian Arabic (colloquial)",
+      "language_code": "ar-EG",
+      "direction": "rtl",
+      "narration": "Write all spoken narration (story_script, voice_script) and character dialogue in natural colloquial Egyptian Arabic, the way a warm storyteller speaks aloud to a 9-11 year old (grades 4-5).",
+      "captions_explanations": "Write captions, explanations and visual labels in simple Modern Standard Arabic that matches the textbook wording. Do not use dialect in them.",
+      "prefer": [
+        "Demonstratives: ده / دي / دول",
+        "Question words: إيه، ليه، إزاي، فين، مين",
+        "Future with ه: هشوف، هنجرّب",
+        "Everyday particles: دلوقتي، كده، بس، خلاص، تاني"
+      ],
+      "avoid": [
+        "Gulf markers: وش، ليش، شلون، الحين",
+        "Levantine markers: شو، هلق، كتير",
+        "Heavy slang or idioms a 9-10 year old may not know"
+      ],
+      "review_note": "Sample narration for this dialect comes from the project's real demo output. Project note: samples contain diacritics; they are stripped before display and TTS.",
+      "sample_narration": {
+        "plant_seed_setup": "زرعت مريم بذرة صغيرة في أصيص الشباك، وكانت متأكدة إنها هتشوف نبتة كبيرة الصبح. رجعت تاني يوم، فالتراب كان ساكت… لكن علامة صغيرة شقته من تحت. بصّت مريم وهمست: «مين بدأ يتحرك هناك؟»",
+        "friction_setup": "كان ممر المدرسة هاديًا، وفجأة سمعت سلمى خشخشة عربة لعبتها. على الأرض أثران: واحد طويل والتاني أقصر. قالت: «أنا دفعت العربة… بس ليه ما كملتش نفس المسافة؟»"
+      },
+      "tts_language": "ar",
+      "forbidden_words": [
+        "وش",
+        "ليش",
+        "شلون",
+        "الحين",
+        "شو",
+        "هلق"
+      ]
+    },
+    "saudi": {
+      "id": "saudi",
+      "label": "Saudi Arabic (white dialect)",
+      "language_code": "ar-SA",
+      "direction": "rtl",
+      "narration": "Write all spoken narration (story_script, voice_script) and character dialogue in natural colloquial Saudi 'white' dialect: neutral and widely understood across the Kingdom, without a strong regional (Najdi, Hijazi, Southern) accent or slang.",
+      "captions_explanations": "Write captions, explanations and visual labels in simple Modern Standard Arabic that matches the textbook wording. Do not use dialect in them.",
+      "prefer": [
+        "Question words: وش، ليش، كيف، وين، منو",
+        "Everyday particles: كذا، الحين، بكرة، ثاني يوم، مرّة (as intensifier)",
+        "Future with ب: بتشوف، بنجرّب",
+        "Negation with ما + verb: ما لقت، ما مشت"
+      ],
+      "avoid": [
+        "Egyptian markers: ده، دي، إيه، إزاي، دلوقتي، كده، عايز",
+        "Levantine markers: شو، هلق، كتير",
+        "Strong regional slang or tribal/regional idioms"
+      ],
+      "review_note": "Sample narration for this dialect was authored by an AI model. Have a native Saudi educator review it before it is used as a reference.",
+      "sample_narration": {
+        "plant_seed_setup": "زرعت مريم بذرة صغيرة في الأصيص عند الشباك، وكانت متأكدة إنها بكرة بتشوف نبتة كبيرة. رجعت ثاني يوم، والتراب ساكت… بس علامة صغيرة شقّته من تحت. قربت مريم وهمست: «وش اللي يتحرك هناك؟»",
+        "friction_setup": "كان ممر المدرسة هادي، وفجأة سمعت سلمى صوت عربتها اللعبة. على الأرض أثرين: واحد طويل وواحد أقصر. قالت: «أنا دفعت العربة… بس ليش ما مشت نفس المسافة؟»"
+      },
+      "tts_language": "ar",
+      "forbidden_words": [
+        "ده",
+        "دي",
+        "دول",
+        "إيه",
+        "إزاي",
+        "دلوقتي",
+        "كده",
+        "عايز",
+        "عايزة",
+        "ليه",
+        "فين",
+        "شو",
+        "هلق",
+        "كتير"
+      ]
+    },
+    "msa": {
+      "id": "msa",
+      "label": "Modern Standard Arabic (simple, spoken-style)",
+      "language_code": "ar",
+      "direction": "rtl",
+      "narration": "Write all narration (story_script, voice_script) and character dialogue in simple, warm Modern Standard Arabic: short sentences, concrete verbs, everyday vocabulary and a natural storytelling rhythm. No dialect words and no heavy classical or literary vocabulary.",
+      "captions_explanations": "Write captions, explanations and visual labels in simple Modern Standard Arabic that matches the textbook wording.",
+      "prefer": [
+        "Short sentences of about 8-14 words",
+        "Active, concrete verbs",
+        "Simple dialogue verbs: قال، همست، سأل، ابتسم",
+        "Plain unvowelled text: never write diacritics or tanween"
+      ],
+      "avoid": [
+        "Any colloquial words (ده، وش، ليش، إيه ...)",
+        "Rare classical vocabulary",
+        "Long chains of subordinate clauses",
+        "Lecture connectors such as: ومن الجدير بالذكر"
+      ],
+      "review_note": "Sample narration for this dialect was authored by an AI model; review wording against the target grade.",
+      "sample_narration": {
+        "plant_seed_setup": "زرعت مريم بذرة صغيرة في أصيص النافذة، وكانت واثقة أنها سترى نبتة كبيرة في الصباح. وفي اليوم التالي بدا التراب ساكنًا… لكن علامة صغيرة شقّته من تحته. اقتربت مريم وهمست: «من الذي بدأ يتحرك هناك؟»",
+        "friction_setup": "كان ممر المدرسة هادئًا، وفجأة سمعت سلمى صوت عربتها اللعبة. على الأرض أثران: أحدهما طويل والآخر أقصر. قالت: «دفعتُ العربة… فلماذا لم تقطع المسافة نفسها؟»"
+      },
+      "tts_language": "ar",
+      "forbidden_words": [
+        "ده",
+        "دي",
+        "دول",
+        "وش",
+        "ليش",
+        "ليه",
+        "إيه",
+        "إزاي",
+        "فين",
+        "دلوقتي",
+        "كده",
+        "عايز",
+        "عايزة",
+        "شو",
+        "هلق",
+        "كتير",
+        "الحين",
+        "شلون"
+      ]
+    },
+    "english": {
+      "id": "english",
+      "label": "English",
+      "language_code": "en",
+      "direction": "ltr",
+      "narration": "Write all narration (story_script, voice_script) and character dialogue in simple, warm, spoken-style English for a 9-11 year old (grades 4-5): short sentences, concrete verbs, contractions allowed.",
+      "captions_explanations": "Write captions, explanations and visual labels in plain English that matches the textbook wording.",
+      "prefer": [
+        "Short sentences",
+        "Concrete, sensory verbs",
+        "Contractions (it's, didn't, she'd)",
+        "Simple dialogue tags: said, whispered, asked"
+      ],
+      "avoid": [
+        "Idioms and slang a child may not know",
+        "Academic connectors such as: therefore, thus, moreover",
+        "Lecture openers such as: Today we will learn"
+      ],
+      "review_note": "Sample narration for this dialect was authored by an AI model.",
+      "sample_narration": {
+        "plant_seed_setup": "Maryam planted a tiny seed in the pot by the window, sure she'd see a big plant by morning. The next day the soil sat perfectly still… but a tiny mark had cracked it open from underneath. Maryam leaned in and whispered, \"Who's moving down there?\"",
+        "friction_setup": "The school hallway was quiet, until Salma heard her toy cart rattle. Two marks lay on the floor: one long, one short. \"I pushed it the same way,\" she said. \"So why didn't it go as far?\""
+      },
+      "tts_language": "en",
+      "forbidden_words": []
+    }
+  },
+  "shared_rules": {
+    "terminology": "Technical terms, labels, units and numbers must always match the textbook exactly, whatever dialect is selected.",
+    "student_address_arabic": "Arabic imperatives are gendered. Prefer gender-neutral phrasing (plural or 'let's' style, for example: خلّينا نجرّب / لنجرّب) instead of guessing the learner's gender. If the product knows the learner's gender, pass it explicitly as an input.",
+    "student_address_english": "Address the learner as 'you'.",
+    "consistency": "Use one dialect per lesson. Do not mix dialects inside a lesson or a scene.",
+    "json_keys": "JSON keys and enum values stay in English. Only learner-facing string values use the selected language.",
+    "no_diacritics": "Never write diacritics (tashkeel) or tanween anywhere: no fatha, damma, kasra, sukun, shadda, tanween and no tatweel. Plain unvowelled letters only.",
+    "spoken_numbers": "All spoken text (story, narration, quiz, checks, reactions) is read aloud by a text-to-speech voice, so write every number as a word (for example خمس تفاحات, not 5). Digits and symbols are allowed only inside the SVG drawing and in lab labels."
+  }
+}

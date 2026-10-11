@@ -1,0 +1,160 @@
+{
+  "id": "lesson-1791465329786",
+  "title": "عمليتا الجمع والطرح",
+  "scene": {
+    "svg": "<svg viewBox='0 0 600 320' xmlns='http://www.w3.org/2000/svg' style='background-color: #f8f9fa;'><rect x='10' y='10' width='580' height='300' rx='15' fill='#ffffff' stroke='#e9ecef' stroke-width='3'/><line x1='300' y1='40' x2='300' y2='280' stroke='#dee2e6' stroke-dasharray='5,5' stroke-width='2'/><g data-part-id='initial_stock'><rect x='50' y='80' width='180' height='100' rx='10' fill='#e2eafc' stroke='#b6ccfe' stroke-width='2'/><text x='140' y='115' font-family='Cairo' font-size='16' fill='#1d3557' text-anchor='middle' font-weight='bold'>الكمية الابتدائية</text><text x='140' y='155' font-family='Cairo' font-size='28' fill='#1d3557' text-anchor='middle' font-weight='bold'>10</text></g><g data-part-id='addition_zone'><circle cx='140' cy='240' r='30' fill='#d8f3dc' stroke='#52b788' stroke-width='2'/><text x='140' y='248' font-family='Cairo' font-size='32' fill='#1b4332' text-anchor='middle' font-weight='bold'>+</text><text x='140' y='290' font-family='Cairo' font-size='14' fill='#1b4332' text-anchor='middle'>إضافة (جمع)</text></g><g data-part-id='subtraction_zone'><circle cx='460' cy='240' r='30' fill='#fcd5ce' stroke='#f08080' stroke-width='2'/><text x='460' y='246' font-family='Cairo' font-size='32' fill='#590d22' text-anchor='middle' font-weight='bold'>-</text><text x='460' y='290' font-family='Cairo' font-size='14' fill='#590d22' text-anchor='middle'>خصم (طرح)</text></g><g data-part-id='total_display'><rect x='370' y='80' width='180' height='100' rx='10' fill='#edf2f4' stroke='#8d99ae' stroke-width='2'/><text x='460' y='115' font-family='Cairo' font-size='16' fill='#2b2d42' text-anchor='middle' font-weight='bold'>الرصيد النهائي (=)</text><text x='460' y='155' font-family='Cairo' font-size='28' fill='#d90429' text-anchor='middle' font-weight='bold'>النتيجة</text></g></svg>"
+  },
+  "parts": [
+    {
+      "id": "initial_stock",
+      "label": "الكمية الابتدائية",
+      "narration": "دي نقطة البداية بتاعتنا، الكمية اللي بنبدأ بيها الحساب قبل ما نعمل أي تغيير. في الرياضيات، ده الرقم الأولاني اللي بنبني عليه كل العمليات الحسابية الجاية.",
+      "simple_narration": "دي الكمية الأساسية اللي بنبدأ بيها الحساب.",
+      "highlight": {
+        "zoom": 1.4
+      }
+    },
+    {
+      "id": "addition_zone",
+      "label": "عملية الجمع (+)",
+      "narration": "الجمع يعني بنضم كميات على بعضها عشان نكبر الرقم الأصلي. علامة الزائد (+) بتعبر عن زيادة أو إضافة عناصر جديدة للمجموعة اللي معانا.",
+      "simple_narration": "الجمع (+) بيزود الكمية وبيكبر الرقم.",
+      "highlight": {
+        "zoom": 1.5
+      }
+    },
+    {
+      "id": "subtraction_zone",
+      "label": "عملية الطرح (-)",
+      "narration": "الطرح هو عكس الجمع تمامًا. بنستخدم علامة الناقص (-) لما نحب نشيل أو نخصم جزء من الكمية اللي موجودة عندنا، وده بيصغر الرقم النهائي.",
+      "simple_narration": "الطرح (-) بيقلل الكمية وبياخد منها.",
+      "highlight": {
+        "zoom": 1.5
+      }
+    },
+    {
+      "id": "total_display",
+      "label": "الرصيد النهائي",
+      "narration": "علامة اليساوي (=) بتفصل بين العملية والنتيجة النهائية. الرقم اللي بيظهر هنا هو المحصلة الأخيرة بعد ما جمعنا وطرحنا كل الكميات.",
+      "simple_narration": "ده الناتج النهائي بعد كل عمليات الجمع والطرح.",
+      "highlight": {
+        "zoom": 1.4
+      }
+    }
+  ],
+  "lab": {
+    "controls": [
+      {
+        "id": "added",
+        "label": "الكمية المضافة (+)",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "default": 5
+      },
+      {
+        "id": "subtracted",
+        "label": "الكمية المطروحة (-)",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "default": 3
+      }
+    ],
+    "model": {
+      "outputs": [
+        {
+          "id": "net_change",
+          "label": "صافي التغيير",
+          "unit": "وحدات",
+          "formula": "added - subtracted"
+        },
+        {
+          "id": "final_balance",
+          "label": "الرصيد النهائي",
+          "unit": "وحدات",
+          "formula": "10 + added - subtracted"
+        }
+      ]
+    },
+    "reactions": [
+      {
+        "when": {
+          "output": "final_balance",
+          "above": 12
+        },
+        "say": "الرصيد النهائي زاد بشكل واضح لإن الإضافات أكتر بكتير من اللي طرحناه!"
+      },
+      {
+        "when": {
+          "control": "added",
+          "change": "increase"
+        },
+        "say": "كل ما بتزود الجمع، الرصيد النهائي بيكبر مباشرة."
+      },
+      {
+        "when": {
+          "control": "subtracted",
+          "change": "increase"
+        },
+        "say": "زيادة الطرح بتسحب من الرصيد وتقلل الناتج النهائي."
+      }
+    ],
+    "visual": null
+  },
+  "story": [
+    {
+      "text": "يوسف مسؤول عن تنظيم رف التبرعات في جمعية خيرية. بدأ الأسبوع ومعاه 15 كرتونة مواد غذائية على الرف ككمية ابتدائية، ومحتاج يتابع حركة الرف بدقة عشان يضمن إنه ميفضاش تماماً ولا يتكدس.",
+      "part": "initial_stock"
+    },
+    {
+      "text": "يوم الثلاثاء، جاله متبرع كريم وقدم 12 كرتونة جديدة. هنا يوسف استخدم عملية الجمع (+) عشان يضيف الكمية الجديدة للرصيد الأصلي: 15 زائد 12 بيساوي 27 كرتونة.",
+      "part": "addition_zone"
+    },
+    {
+      "text": "يوم الخميس، زار الجمعية عائلات مستحقة وأخذوا 9 كراتين. عشان يعرف المتبقي، يوسف استخدم عملية الطرح (-) وخصمهم من الإجمالي: 27 ناقص 9 بيساوي 18 كرتونة.",
+      "part": "subtraction_zone"
+    },
+    {
+      "text": "يوسف لاحظ إن الطرح هو العملية العكسية للجمع. يعني لو ضاف 5 كراتين ورجع طرح 5 كراتين، الرصيد هيرجع زي ما كان بالظبط بدون أي تغيير.",
+      "part": "total_display"
+    },
+    {
+      "text": "القاعدة الأساسية لإدارة أي مخزن أو حساب في العالم هي: الرصيد النهائي = الرصيد الابتدائي + الإضافات - المسحوبات. دي المعادلة البسيطة اللي بتدور بيها كبرى شركات الشحن والمخازن العالمية.",
+      "part": null
+    }
+  ],
+  "quiz": {
+    "question": "لو يوسف بدأ بـ 20 كرتونة، وجاله تبرع بـ 10 كراتين، وبعدين وزّع منهم 15 كرتونة. الرصيد النهائي على الرف هيبقى كام؟",
+    "options": [
+      "15 كرتونة",
+      "25 كرتونة",
+      "5 كراتين"
+    ],
+    "answer": 0,
+    "explanation": "الحسبة هي: بنبدأ بـ 20 ونجمع عليها 10 تبرعات فيبقى معانا 30 كرتونة. بعدين نطرح الـ 15 اللي اتوزعوا: 30 - 15 = 15 كرتونة متبقية.",
+    "retell": 4
+  },
+  "checks": [
+    {
+      "question": "لو طرحنا أي رقم من نفسه (مثلاً 8 - 8)، الناتج دايماً بيكون كام؟",
+      "options": [
+        "1",
+        "0",
+        "نفس الرقم"
+      ],
+      "answer": 1,
+      "explanation": "طرح الرقم من نفسه معناه إننا شيلنا كل الكمية اللي كانت موجودة، فمبيفضلش أي حاجة، والنتيجة بتكون صفر."
+    },
+    {
+      "question": "عملية الجمع بتتميز بخاصية الإبدال (يعني 5 + 3 هي هي 3 + 5). هل الطرح كمان فيه الخاصية دي؟",
+      "options": [
+        "أيوه، الطرح كمان إبدالي",
+        "لأ، ترتيب الأرقام في الطرح بيغير النتيجة تماماً",
+        "في حالات معينة بس"
+      ],
+      "answer": 1,
+      "explanation": "الجمع إبدالي، لكن الطرح لأ. ترتيب الأرقام في الطرح مهم جداً؛ لأن 5 - 3 بيساوي 2، بينما 3 - 5 بيساوي سالب 2."
+    }
+  ]
+}

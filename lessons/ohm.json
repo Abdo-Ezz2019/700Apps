@@ -1,0 +1,33 @@
+{
+  "id": "ohm",
+  "title": "قانون أوم",
+  "scene": {
+    "svg": "<svg viewBox='0 0 600 320' xmlns='http://www.w3.org/2000/svg'><g data-part-id='wire'><path d='M100 130 V60 H500 V260 H100 V190' fill='none' stroke='#14213d' stroke-width='5' stroke-linejoin='round'/><path id='wire-path' d='M100 130 V60 H500 V260 H100 V190' fill='none' stroke='transparent' stroke-width='26'/></g><g data-part-id='battery'><rect x='70' y='125' width='60' height='70' rx='8' fill='#e3edf9' stroke='#1d4e89' stroke-width='4'/><text x='100' y='150' text-anchor='middle' font-family='Cairo' font-size='20' font-weight='700' fill='#1d4e89' pointer-events='none'>+</text><text x='100' y='184' text-anchor='middle' font-family='Cairo' font-size='24' font-weight='700' fill='#1d4e89' pointer-events='none'>−</text><text x='100' y='222' text-anchor='middle' font-family='Cairo' font-size='16' fill='#14213d' pointer-events='none'>بطارية</text></g><g data-part-id='resistor'><rect x='240' y='38' width='120' height='44' rx='6' fill='#fff1cf' stroke='#fca311' stroke-width='4'/><polyline points='250,60 265,46 280,74 295,46 310,74 325,46 340,74 350,60' fill='none' stroke='#14213d' stroke-width='3'/><text x='300' y='108' text-anchor='middle' font-family='Cairo' font-size='16' fill='#14213d' pointer-events='none'>مقاومة</text></g><g data-part-id='bulb'><circle id='bulb-glow' cx='500' cy='160' r='42' fill='#ffd84d' opacity='0'/><circle cx='500' cy='160' r='22' fill='#fff' stroke='#14213d' stroke-width='4'/><path d='M489 170 l5 -11 l6 11 l6 -11 l5 11' fill='none' stroke='#14213d' stroke-width='2.5'/><text x='552' y='166' text-anchor='middle' font-family='Cairo' font-size='16' fill='#14213d' pointer-events='none'>لمبة</text></g><g data-part-id='law'><rect x='215' y='140' width='170' height='54' rx='12' fill='#fff' stroke='#14213d' stroke-width='3'/><text x='300' y='177' text-anchor='middle' font-family='Cairo' font-size='26' font-weight='700' fill='#14213d' pointer-events='none'>I = V ÷ R</text></g></svg>"
+  },
+  "parts": [
+    { "id": "battery", "label": "البطارية", "narration": "دي البطارية. هي مصدر الجهد الكهربي، يعني هي اللي بتدفع الشحنات تتحرك في الدايرة. كل ما الجهد زاد، الدفعة بقت أقوى. وبنقيس الجهد بالفولت.", "simple_narration": "البطارية بتدفع الكهرباء في السلك.", "highlight": { "zoom": 1.7 } },
+    { "id": "resistor", "label": "المقاومة", "narration": "دي المقاومة. شغلها إنها تصعّب على الشحنات إنها تعدّي، فبتقلل التيار. وبنقيسها بالأوم. كل ما المقاومة زادت، التيار قلّ.", "simple_narration": "المقاومة بتبطّأ الكهرباء.", "highlight": { "zoom": 1.7 } },
+    { "id": "wire", "label": "السلك والتيار", "narration": "السلك هو الطريق اللي الشحنات بتمشي فيه. الدايرة لازم تكون مقفولة عشان التيار يمشي. والنقط الزرقا المتحركة بتمثّل حركة الشحنات، وسرعتها بتعبّر عن شدة التيار بالأمبير.", "simple_narration": "السلك هو الطريق اللي الكهرباء بتمشي فيه.", "highlight": { "zoom": 1.1 } },
+    { "id": "bulb", "label": "اللمبة", "narration": "اللمبة بتوضّحلك شدة التيار قدامك. كل ما التيار زاد، نورها زاد.", "simple_narration": "اللمبة بتنوّر أكتر لما الكهرباء تزيد.", "highlight": { "zoom": 1.7 } },
+    { "id": "law", "label": "قانون أوم", "narration": "ده قانون أوم. التيار يساوي الجهد قسمة المقاومة. يعني لو الجهد زاد، التيار يزيد. ولو المقاومة زادت، التيار يقل.", "simple_narration": "التيار = الجهد ÷ المقاومة.", "highlight": { "zoom": 1.5 } }
+  ],
+  "lab": {
+    "controls": [
+      { "id": "voltage", "label": "الجهد (فولت)", "min": 1, "max": 12, "step": 1, "default": 6 },
+      { "id": "resistance", "label": "المقاومة (أوم)", "min": 1, "max": 20, "step": 1, "default": 6 }
+    ],
+    "model": { "outputs": [ { "id": "current", "label": "التيار", "unit": "أمبير", "formula": "voltage / resistance" } ] },
+    "reactions": [
+      { "when": { "output": "current", "above": 4 }, "say": "التيار بقى عالي جدًا! في الحقيقة السلك ممكن يسخن ويتحرق في الحالة دي." },
+      { "when": { "control": "voltage", "change": "increase" }, "say": "لاحظ إن التيار زاد لما زوّدت الجهد، لإن الدفعة بقت أقوى." },
+      { "when": { "control": "voltage", "change": "decrease" }, "say": "الجهد قلّ، فالدفعة ضعفت والتيار قلّ." },
+      { "when": { "control": "resistance", "change": "increase" }, "say": "المقاومة زادت فالتيار قلّ. الشحنات بقت بتتزاحم أكتر." },
+      { "when": { "control": "resistance", "change": "decrease" }, "say": "المقاومة قلّت، فالطريق بقى أسهل والتيار زاد." }
+    ],
+    "visual": { "flow_path": "wire-path", "speed_output": "current", "speed_scale": 70, "glow": "bulb-glow", "glow_output": "current", "glow_max": 4 }
+  },
+  "checks": [
+    { "question": "لو ضاعفنا المقاومة والجهد ثابت، التيار هيعمل إيه؟", "options": ["يتضاعف", "يقل للنص", "يفضل زي ما هو"], "answer": 1, "explanation": "التيار = الجهد ÷ المقاومة، فلما المقاومة تتضاعف التيار يقل للنص. جرّب بنفسك في المعمل!" },
+    { "question": "لو زوّدنا الجهد والمقاومة ثابتة، اللمبة هتعمل إيه؟", "options": ["تنوّر أكتر", "تنوّر أقل", "مفيش فرق"], "answer": 0, "explanation": "الجهد الأكبر يدفع تيار أكبر، فاللمبة بتنوّر أكتر." }
+  ]
+}
